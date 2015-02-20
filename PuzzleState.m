@@ -1,3 +1,7 @@
+%Brent Baker (.1173)
+%Feras Deiratany (.1)
+%Base puzzle state object
+
 classdef PuzzleState < handle
 	properties
     	parent;
