@@ -1,5 +1,5 @@
-%Brent Baker (.1773)
-%Feras Deiratany (.1)
+%Brent Baker (.1773) (%50)
+%Feras Deiratany (.1) (%50)
 %BFS Search method
 
 function puzzle = BFS(start, goal)

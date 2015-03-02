@@ -1,24 +1,24 @@
-%Brent Baker (.1773)
-%Feras Deiratany (.1)
+%Brent Baker (.1773) (%50)
+%Feras Deiratany (.1) (%50)
 %IDS Search method
 
 function puzzle = IDS(start,goal)
     depth = 0;
     maxDepth = 10;
-	s = PuzzleState();
-	s.setState(start);
+    s = PuzzleState();
+    s.setState(start);
     s.setDepth(depth);
-	puzzle = s;
-	knownStates = {};
-	currentStates = LinkedList();
-	knownStates = union(knownStates, {s.getState});
-	currentStates.push(s);
-	goalTest = strcmp(s.getState, goal);
-	if(goalTest)
-    		return
+    puzzle = s;
+    knownStates = {};
+    currentStates = LinkedList();
+    knownStates = union(knownStates, {s.getState});
+    currentStates.push(s);
+    goalTest = strcmp(s.getState, goal);
+    if(goalTest)
+            return
     end
     while(~currentStates.isEmpty)
-    	s = currentStates.pop();
+        s = currentStates.pop();
         depth = s.getDepth() + 1;
         if(depth < maxDepth)
             if(PuzzleState.canMoveUp(s.getState()))
@@ -95,6 +95,3 @@ function puzzle = IDS(start,goal)
         end
     end
 end
-
-
-
